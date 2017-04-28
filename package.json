@@ -3,18 +3,19 @@
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
-		"start": "node node_modules/react-native/local-cli/cli.js start",
+		"start": "node node_modules/react-native/local-cli/cli.js start --config rn-cli.config.js",
 		"test": "jest"
 	},
 	"dependencies": {
 		"react": "16.0.0-alpha.6",
-		"react-native": "0.43.4"
+		"react-native": "git+https://github.com/ds300/ts-react-native#65766c5662d0301ffaf98ed9cd183756896c0a00"
 	},
 	"devDependencies": {
 		"babel-jest": "19.0.0",
 		"babel-preset-react-native": "1.9.1",
 		"jest": "19.0.2",
-		"react-test-renderer": "16.0.0-alpha.6"
+		"react-test-renderer": "16.0.0-alpha.6",
+		"typescript": "^2.3.1"
 	},
 	"jest": {
 		"preset": "react-native"

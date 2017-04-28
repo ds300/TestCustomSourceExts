@@ -12,20 +12,17 @@ import {
   View
 } from 'react-native';
 
+import Button from './Button';
+
 export default class TestCustomSourceExts extends Component {
+  state = {count: 1}
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
+        <View style={styles.welcome}>
+          <Text>the count is {this.state.count}</Text>
+        </View>
+        <Button onPress={() => this.setState(({count}) => ({count: count + 1}))} />
       </View>
     );
   }
